@@ -2,14 +2,14 @@
 
  guessNumber ()
  {
-    read -p "$1: "
-    while (( $REPLY < $2 || $REPLY > $2 )); do
+    read -p "$1: " #reads the user input 
+    while (( $REPLY < $2 || $REPLY > $2 )); do #compares the user input to the specified number '42' and executes the if statement if matches one of the conditions
         if [[ $REPLY < $2 ]]; then 
             echo "Too low"
         elif [[ $REPLY > $2 ]]; then
             echo "Too high"
         fi
-    read -p "$1: "
+    read -p "$1: " #keep prompting for guesses if right answer isn't provided
     done
  }
 

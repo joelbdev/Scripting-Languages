@@ -1,8 +1,8 @@
 #!/bin/bash
 
-./passwordcheck.sh
+./passwordcheck.sh #runs the passcheck script located in the same directory - therefore only continues to execute if user supplies corect password
 
-if test $? -eq 0; then
+if test $? -eq 0; then #options to execute different scripts
     echo -e "\033[35m Select an option:"
     echo -e "\033[34m 1) Create a folder"
     echo -e "\033[34m 2) Copy a folder"
@@ -14,9 +14,10 @@ if test $? -eq 0; then
     echo -e "\033[34m 8) Exit"
 fi
 read useroption;
+
 while true 
 do
-    case $useroption in
+    case $useroption in #executes the different scripts based on the user selection
         1) ./foldermaker.sh;;
         2) ./foldercopier.sh;;
         3) ./setPassword.sh;;
