@@ -4,7 +4,7 @@
 x=1
 echo -e "\033[31m Scraping Packetstorm Security for latest exploits!\033[0m"
 
-while [[ $x -le 2 ]]; do
+while [[ $x -le 5 ]]; do
 
 #download each page of the website
 curl https://packetstormsecurity.com/files/tags/exploit/page$x/ > analysisfile
@@ -28,6 +28,6 @@ eog ./wordcloud.png #open the wordcloud
 
 #cleaning up after itself
 rm ./data/*.csv
-rm analysisfile
+rm ./analysisfile
 
 

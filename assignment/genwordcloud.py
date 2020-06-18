@@ -16,10 +16,9 @@ for file in all_files:
 frame = pd.concat(li, axis=1)
 frame.columns = ['Date', 'Author', 'Tag', 'Title','link']
 finalframe = frame.dropna()
-finalframe.to_csv('test.csv')
+finalframe.to_csv('scraperesults.csv')
 
 #read the tags column of the dataframe and create a string with all of the list elements
-#df1 = pd.read_csv('test.csv')
 tags = finalframe['Tag']
 tagslist = tags.values.tolist()
 tagsstring = ', '.join(map(str, tagslist))
