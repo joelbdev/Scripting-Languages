@@ -16,6 +16,6 @@
 
 echo "This is a number guessing game"
 guessNumber "Guess a number between 1 and 100" 42
-echo "Correct: you guessed the right number!"
+echo "Right: you guessed the right number!"
 
 
