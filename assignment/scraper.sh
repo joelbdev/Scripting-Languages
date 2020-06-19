@@ -1,10 +1,21 @@
 #!/bin/bash
 
+#Ensure user input is an integer
+
+RegexCheck='^[0-9]+$'
+UserInput=$1
+
+if ! [[ $UserInput =~ $RegexCheck ]]; then
+    echo -e "\033[31m Please enter a number and restart the script!"
+    exit
+fi
+
 #While loop to iterate over the first 5 pages of the website
+
 x=1
 echo -e "\033[31m Scraping Packetstorm Security for latest exploits!\033[0m"
 
-while [[ $x -le 5 ]]; do
+while [[ $x -le $1 ]]; do
 
 #download each page of the website
 curl https://packetstormsecurity.com/files/tags/exploit/page$x/ > analysisfile
@@ -21,6 +32,8 @@ links=$(cat analysisfile| grep 'ico text-plain' | cut -d'>' -f2 | cut -d'"' -f4 
 #increment the x variable to register what page is being scraped
 let "x=x+1"
 done
+#Let the user know that pages were scraped successfully
+echo -e "\033[31m Successfully scraped $1 pages"
 
 #run the python script to concatenate the csv files and generate a wordcloud from the tags
 python3 genwordcloud.py
@@ -29,5 +42,12 @@ eog ./wordcloud.png #open the wordcloud
 #cleaning up after itself
 rm ./data/*.csv
 rm ./analysisfile
+
+#bit of fun
+cowsay "Thanks for using my script!"
+
+exit 0
+
+
 
 
