@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+<title>Exploit Files &#8776; Packet Storm</title>
+<meta name="description" content="Information Security Services, News, Files, Tools, Exploits, Advisories and Whitepapers" />
+<meta name="keywords" content="security,exploit,advisory,whitepaper,xss,csrf,overflow,scanner,vulnerability" />
+<link rel="shortcut icon" href="/img/pss.ico" />
+<link rel="stylesheet" media="screen,print,handheld" href="https://packetstatic.com/css1589669798/pss.css" type="text/css" />
+<!--[if lt ie 8]><link rel="stylesheet" type="text/css" href="https://packetstatic.com/css1589669798/ie.css" /><![endif]-->
+<script type="text/javascript" src="https://packetstatic.com/js1589669798/pt.js"></script>
+<script type="text/javascript" src="https://packetstatic.com/js1589669798/pss.js"></script>
+<link rel="search" type="application/opensearchdescription+xml" href="https://packetstormsecurity.com/opensearch.xml" title="Packet Storm Site Search" />
+<link rel="alternate" type="application/rss+xml" title="Packet Storm Headlines" href="https://rss.packetstormsecurity.com/news/" />
+<link rel="alternate" type="application/rss+xml" title="Packet Storm Recent Files" href="https://rss.packetstormsecurity.com/files/" />
+<link rel="alternate" type="application/rss+xml" title="Packet Storm Exploits" href="https://rss.packetstormsecurity.com/files/tags/exploit/" />
+<link rel="alternate" type="application/rss+xml" title="Packet Storm Advisories" href="https://rss.packetstormsecurity.com/files/tags/advisory/" />
+</head>
+<body id="files">
+<div id="t">
+   <div id="tc">
+      <a id="top" href="/"><img src="https://packetstatic.com/img1514015884/ps_logo.png" width="315" height="65" id="logo" alt="packet storm" /></a>
+      <div id="slogan">what you don't know can hurt you
+</div>
+      <div id="account"><a href="https://packetstormsecurity.com/account/register/">Register</a> | <a href="https://packetstormsecurity.com/account/login/">Login</a></div>
+      <div id="search">
+        <form method="get" action="/search/"><input type="text" name="q" id="q" maxlength="120" value="Search &#8230;" /><button type="submit"></button><div id="q-tabs"><label for="s-files" class="on">Files</label><label for="s-news">News</label><label for="s-users">Users</label><label for="s-authors">Authors</label><input type="radio" value="files" name="s" id="s-files" /><input type="radio" value="news" name="s" id="s-news" /><input type="radio" value="users" name="s" id="s-users" /><input type="radio" value="authors" name="s" id="s-authors" /></div></form>
+      </div>
+   </div>
+    <div id="tn"><div id="tnc">
+        <a href="/" id="tn-home"><span>Home</span></a> <a href="/files/" id="tn-files"><span>Files</span></a> <a href="/news/" id="tn-news"><span>News</span></a> <a href="/about/" id="tn-about"><span>About</span></a> <a href="/contact/" id="tn-contact"><span>Contact</span></a> <a href="/submit/" id="tn-submit"><span>Add New</span></a>
+    </div></div>
+    <div id="tn2"></div>
+</div>
+
+<div id="c">
+
+ <div id="cc">
+     <div id="m">
+    
+
+    <span id="total">Showing 26 - 50 of 45,899</span>
+<a href="https://rss.packetstormsecurity.com/files/tags/exploit/" class="rss-top"><img src="https://packetstatic.com/img1514015884/bt_rss.gif" width="16" height="16" alt="RSS Feed" /> </a>
+
+    <h1>Exploit Files</h1>
+    <div id="lv" title="Toggle List View"></div>
+    <div class="tab-box"><ul class="tabs"><li class="tab"><a href="/files/">All</a></li><li class="tab on"><a href="/files/tags/exploit/">Exploits</a></li><li class="tab"><a href="/files/tags/advisory/">Advisories</a></li><li class="tab"><a href="/files/tags/tool/">Tools</a></li><li class="tab"><a href="/files/tags/paper/">Whitepapers</a></li><li class="tab"><a href="/files/tags/">Other</a></li></ul><div class="tabs-cut"></div></div>
+    <dl id="F158056" class="file first">
+<dt><a class="ico text-plain" href="/files/158056/Background-Intelligent-Transfer-Service-Privilege-Escalation.html" title="Size: 15 KB">Background Intelligent Transfer Service Privilege Escalation</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-11/" title="17:15:16 UTC">Jun 11, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14929/" class="person">itm4n</a>, <a href="/files/author/14987/" class="person">gwillcox-r7</a> | Site <a href="http://www.metasploit.com">metasploit.com</a></dd>
+<dd class="detail"><p>This Metasploit module exploits CVE-2020-0787, an arbitrary file move vulnerability in outdated versions of the Background Intelligent Transfer Service (BITS), to overwrite C:\Windows\System32\WindowsCoreDeviceInfo.dll with a malicious DLL containing the attacker&#39;s payload. To achieve code execution as the SYSTEM user, the Update Session Orchestrator service is then started, which will result in the malicious WindowsCoreDeviceInfo.dll being run with SYSTEM privileges due to a DLL hijacking issue within the Update Session Orchestrator Service. Note that presently this module only works on Windows 10 and Windows Server 2016 and later as the Update Session Orchestrator Service was only introduced in Windows 10. Note that only Windows 10 has been tested, so your mileage may vary on Windows Server 2016 and later.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/arbitrary">arbitrary</a>, <a href="/files/tags/code_execution">code execution</a></dd>
+<dd class="os"><span>systems</span> | <a href="/files/os/windows">windows</a></dd>
+<dd class="cve"><span>advisories</span> | <a href="/files/cve/CVE-2020-0787">CVE-2020-0787</a></dd>
+<dd class="md5"><span>MD5</span> | <code>0804ff3bfe957376a4af71aa3919154f</code></dd>
+<dd class="act-links"><a href="/files/download/158056/cve_2020_0787_bits_arbitrary_file_move.rb.txt" title="Size: 15 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/158056/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/158056/Background-Intelligent-Transfer-Service-Privilege-Escalation.html">View</span></a></dd>
+</dl>
+<dl id="F158053" class="file">
+<dt><a class="ico application-x-zip" href="/files/158053/SMBleed-Uninitialized-Kernel-Memory-Read-Proof-Of-Concept.html" title="Size: 141 MB">SMBleed Uninitialized Kernel Memory Read Proof Of Concept</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-11/" title="16:49:42 UTC">Jun 11, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14276/" class="person">ZecOps</a> | Site <a href="https://www.zecops.com/">zecops.com</a></dd>
+<dd class="detail"><p>This is a proof of concept exploit that demonstrates the SMBleed remote kernel memory read vulnerability.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/remote">remote</a>, <a href="/files/tags/kernel">kernel</a>, <a href="/files/tags/proof_of_concept">proof of concept</a></dd>
+<dd class="cve"><span>advisories</span> | <a href="/files/cve/CVE-2020-1206">CVE-2020-1206</a></dd>
+<dd class="md5"><span>MD5</span> | <code>158c02865ebd54cc54aad47af76b281d</code></dd>
+<dd class="act-links"><a href="/files/download/158053/CVE-2020-1206-POC-smbleed.zip" title="Size: 141 MB" rel="nofollow">Download</a>  | <a href="/files/favorite/158053/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/158053/SMBleed-Uninitialized-Kernel-Memory-Read-Proof-Of-Concept.html">View</span></a></dd>
+</dl>
+<dl id="F158054" class="file">
+<dt><a class="ico application-x-zip" href="/files/158054/SMBleed-SMBGhost-Pre-Authentication-Remote-Code-Execution-Proof-Of-Concept.html" title="Size: 2.4 MB">SMBleed / SMBGhost Pre-Authentication Remote Code Execution Proof Of Concept</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-11/" title="16:49:31 UTC">Jun 11, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14276/" class="person">ZecOps</a> | Site <a href="https://www.zecops.com/">zecops.com</a></dd>
+<dd class="detail"><p>This proof of concept exploits a pre-authentication remote code execution vulnerability by combining SMBleed with SMBGhost.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/remote">remote</a>, <a href="/files/tags/code_execution">code execution</a>, <a href="/files/tags/proof_of_concept">proof of concept</a></dd>
+<dd class="cve"><span>advisories</span> | <a href="/files/cve/CVE-2020-0796">CVE-2020-0796</a></dd>
+<dd class="md5"><span>MD5</span> | <code>3dbbc830a0e476d380e1321d4b64dca0</code></dd>
+<dd class="act-links"><a href="/files/download/158054/CVE-2020-0796-RCE-POC-master.zip" title="Size: 2.4 MB" rel="nofollow">Download</a>  | <a href="/files/favorite/158054/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/158054/SMBleed-SMBGhost-Pre-Authentication-Remote-Code-Execution-Proof-Of-Concept.html">View</span></a></dd>
+</dl>
+<dl id="F158051" class="file">
+<dt><a class="ico application-x-zip" href="/files/158051/CallStranger-UPnP-Vulnerability-Checker.html" title="Size: 1.1 MB">CallStranger UPnP Vulnerability Checker</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-11/" title="16:43:32 UTC">Jun 11, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14986/" class="person">Yunus Cadirci</a> | Site <a href="https://github.com/yunuscadirci/CallStranger">github.com</a></dd>
+<dd class="detail"><p>The Open Connectivity Foundation UPnP specification before 2020-04-17 does not forbid the acceptance of a subscription request with a delivery URL on a different network segment than the fully qualified event-subscription URL, aka the CallStranger issue. This tool checks for the vulnerability.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a></dd>
+<dd class="cve"><span>advisories</span> | <a href="/files/cve/CVE-2020-12695">CVE-2020-12695</a></dd>
+<dd class="md5"><span>MD5</span> | <code>a036cedcc6cedbeb209a55f7ef24a4c3</code></dd>
+<dd class="act-links"><a href="/files/download/158051/CallStranger-master.zip" title="Size: 1.1 MB" rel="nofollow">Download</a>  | <a href="/files/favorite/158051/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/158051/CallStranger-UPnP-Vulnerability-Checker.html">View</span></a></dd>
+</dl>
+<dl id="F158028" class="file">
+<dt><a class="ico application-x-zip" href="/files/158028/Microsoft-Windows-Privilege-Escalation-Code-Execution.html" title="Size: 499.9 KB">Microsoft Windows Privilege Escalation / Code Execution</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-10/" title="15:38:40 UTC">Jun 10, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14985/" class="person">guhe120</a> | Site <a href="https://github.com/guhe120/Windows-EoP">github.com</a></dd>
+<dd class="detail"><p>This research discusses two different vulnerabilities addressed in the June 2020 Microsoft Patch Tuesday. An integer overflow in OLE marshalling and a race condition with arbitrary file deletion are described in detail.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/overflow">overflow</a>, <a href="/files/tags/arbitrary">arbitrary</a>, <a href="/files/tags/vulnerability">vulnerability</a></dd>
+<dd class="cve"><span>advisories</span> | <a href="/files/cve/CVE-2020-1021">CVE-2020-1021</a>, <a href="/files/cve/CVE-2020-1281">CVE-2020-1281</a></dd>
+<dd class="md5"><span>MD5</span> | <code>d0d7691eecbbd82916538605ee2bdfa4</code></dd>
+<dd class="act-links"><a href="/files/download/158028/Windows-EoP-master.zip" title="Size: 499.9 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/158028/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/158028/Microsoft-Windows-Privilege-Escalation-Code-Execution.html">View</span></a></dd>
+</dl>
+<dl id="F158025" class="file">
+<dt><a class="ico text-plain" href="/files/158025/LinuxKI-Toolset-6.01-Remote-Command-Execution.html" title="Size: 5.1 KB">LinuxKI Toolset 6.01 Remote Command Execution</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-10/" title="15:25:50 UTC">Jun 10, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/13934/" class="person">numan turle</a>, <a href="/files/author/14779/" class="person">Cody Winkler</a> | Site <a href="http://www.metasploit.com">metasploit.com</a></dd>
+<dd class="detail"><p>This Metasploit module exploits a vulnerability in LinuxKI Toolset versions 6.01 and below which allows remote code execution. The kivis.php pid parameter received from the user is sent to the shell_exec function, resulting in the security vulnerability.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/remote">remote</a>, <a href="/files/tags/php">php</a>, <a href="/files/tags/code_execution">code execution</a></dd>
+<dd class="cve"><span>advisories</span> | <a href="/files/cve/CVE-2020-7209">CVE-2020-7209</a></dd>
+<dd class="md5"><span>MD5</span> | <code>cd78cc0c010d3ea09c0e4662335d84a3</code></dd>
+<dd class="act-links"><a href="/files/download/158025/linuxki_rce.rb.txt" title="Size: 5.1 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/158025/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/158025/LinuxKI-Toolset-6.01-Remote-Command-Execution.html">View</span></a></dd>
+</dl>
+<dl id="F158003" class="file">
+<dt><a class="ico text-plain" href="/files/158003/Sistem-Informasi-Pengumuman-Kelulusan-Online-1.0-CSRF.html" title="Size: 1.1 KB">Sistem Informasi Pengumuman Kelulusan Online 1.0 CSRF</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-10/" title="15:01:38 UTC">Jun 10, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14984/" class="person">Extinction</a></dd>
+<dd class="detail"><p>Sistem Informasi Pengumuman Kelulusan Online version 1.0 suffers from a cross site request forgery vulnerability.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/csrf">csrf</a></dd>
+<dd class="md5"><span>MD5</span> | <code>fbf139e97c72e479d33c0014eaa67e75</code></dd>
+<dd class="act-links"><a href="/files/download/158003/sipko10-xsrf.txt" title="Size: 1.1 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/158003/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/158003/Sistem-Informasi-Pengumuman-Kelulusan-Online-1.0-CSRF.html">View</span></a></dd>
+</dl>
+<dl id="F158002" class="file">
+<dt><a class="ico application-pdf" href="/files/158002/Pydio-Cells-2.0.4-XSS-File-Write-Code-Execution.html" title="Size: 1.3 MB">Pydio Cells 2.0.4 XSS / File Write / Code Execution</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-09/" title="19:50:41 UTC">Jun  9, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/2222/" class="person">Core Security Technologies</a>, <a href="/files/author/14193/" class="person">Ramiro Molina</a>, <a href="/files/author/14983/" class="person">Ivan Koiffman</a> | Site <a href="http://www.coresecurity.com/corelabs/">coresecurity.com</a></dd>
+<dd class="detail"><p>Pydio Cells version 2.0.4 suffers from cross site scripting, file write, code execution, and various other vulnerabilities.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/vulnerability">vulnerability</a>, <a href="/files/tags/code_execution">code execution</a>, <a href="/files/tags/xss">xss</a></dd>
+<dd class="cve"><span>advisories</span> | <a href="/files/cve/CVE-2020-12847">CVE-2020-12847</a>, <a href="/files/cve/CVE-2020-12848">CVE-2020-12848</a>, <a href="/files/cve/CVE-2020-12849">CVE-2020-12849</a>, <a href="/files/cve/CVE-2020-12850">CVE-2020-12850</a>, <a href="/files/cve/CVE-2020-12851">CVE-2020-12851</a>, <a href="/files/cve/CVE-2020-12852">CVE-2020-12852</a>, <a href="/files/cve/CVE-2020-12853">CVE-2020-12853</a></dd>
+<dd class="md5"><span>MD5</span> | <code>37f85d55bff56ee29347e72ef5b07144</code></dd>
+<dd class="act-links"><a href="/files/download/158002/CORE-2020-0007.pdf" title="Size: 1.3 MB" rel="nofollow">Download</a>  | <a href="/files/favorite/158002/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/158002/Pydio-Cells-2.0.4-XSS-File-Write-Code-Execution.html">View</span></a></dd>
+</dl>
+<dl id="F158001" class="file">
+<dt><a class="ico text-plain" href="/files/158001/CipherMail-Community-Virtual-Appliance-4.6.2-Code-Execution.html" title="Size: 8.7 KB">CipherMail Community Virtual Appliance 4.6.2 Code Execution</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-09/" title="19:45:24 UTC">Jun  9, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/2222/" class="person">Core Security Technologies</a>, <a href="/files/author/13747/" class="person">Fernando Diaz</a>, <a href="/files/author/13748/" class="person">Fernando Catoira</a>, <a href="/files/author/14983/" class="person">Ivan Koiffman</a> | Site <a href="http://www.coresecurity.com/corelabs/">coresecurity.com</a></dd>
+<dd class="detail"><p>CipherMail Community Virtual Appliance version 4.6.2 suffers from remote command execution and file injection vulnerabilities.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/remote">remote</a>, <a href="/files/tags/vulnerability">vulnerability</a></dd>
+<dd class="cve"><span>advisories</span> | <a href="/files/cve/CVE-2020-12713">CVE-2020-12713</a>, <a href="/files/cve/CVE-2020-12714">CVE-2020-12714</a></dd>
+<dd class="md5"><span>MD5</span> | <code>1e03b7ce73404f389184d11c6489d8e8</code></dd>
+<dd class="act-links"><a href="/files/download/158001/CORE-2020-0008.txt" title="Size: 8.7 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/158001/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/158001/CipherMail-Community-Virtual-Appliance-4.6.2-Code-Execution.html">View</span></a></dd>
+</dl>
+<dl id="F157999" class="file">
+<dt><a class="ico text-plain" href="/files/157999/Joomla-J2-Store-3.3.11-SQL-Injection.html" title="Size: 1.8 KB">Joomla J2 Store 3.3.11 SQL Injection</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-09/" title="19:35:41 UTC">Jun  9, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14911/" class="person">Mehmet Kelepce</a></dd>
+<dd class="detail"><p>Joomla J2 Store version 3.3.11 suffers from an authenticated remote SQL injection vulnerability.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/remote">remote</a>, <a href="/files/tags/sql_injection">sql injection</a></dd>
+<dd class="md5"><span>MD5</span> | <code>bcb67b2a060b4dca741c446a88d6159a</code></dd>
+<dd class="act-links"><a href="/files/download/157999/joomlaj2store3311-sql.txt" title="Size: 1.8 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157999/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157999/Joomla-J2-Store-3.3.11-SQL-Injection.html">View</span></a></dd>
+</dl>
+<dl id="F157998" class="file">
+<dt><a class="ico text-plain" href="/files/157998/WebUntis-2020.12.1-Cross-Site-Scripting.html" title="Size: 2.4 KB">WebUntis 2020.12.1 Cross Site Scripting</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-09/" title="19:33:30 UTC">Jun  9, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14981/" class="person">Robin Meis</a></dd>
+<dd class="detail"><p>WebUntis versions 2020.12.1 and below suffer from a persistent cross site scripting vulnerability.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/xss">xss</a></dd>
+<dd class="md5"><span>MD5</span> | <code>226a393a86c5ac19e4e242b09ff73bba</code></dd>
+<dd class="act-links"><a href="/files/download/157998/webuntis2020121-xss.txt" title="Size: 2.4 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157998/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157998/WebUntis-2020.12.1-Cross-Site-Scripting.html">View</span></a></dd>
+</dl>
+<dl id="F157989" class="file">
+<dt><a class="ico text-plain" href="/files/157989/Bandwidth-Monitor-3.9-Full-ROP-Buffer-Overflow.html" title="Size: 6.4 KB">Bandwidth Monitor 3.9 Full ROP Buffer Overflow</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-09/" title="16:47:48 UTC">Jun  9, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14721/" class="person">Bobby Cooke</a></dd>
+<dd class="detail"><p>Bandwidth Monitor version 3.9 full ROP buffer overflow exploit with SEH, DEP, and ASLR taken into consideration.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/overflow">overflow</a></dd>
+<dd class="md5"><span>MD5</span> | <code>e485411f8850c19591908825d56fde0f</code></dd>
+<dd class="act-links"><a href="/files/download/157989/BandMon_3.9_ROP.py.txt" title="Size: 6.4 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157989/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157989/Bandwidth-Monitor-3.9-Full-ROP-Buffer-Overflow.html">View</span></a></dd>
+</dl>
+<dl id="F157988" class="file">
+<dt><a class="ico text-plain" href="/files/157988/Bludit-3.9.12-Directory-Traversal.html" title="Size: 6.3 KB">Bludit 3.9.12 Directory Traversal</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-09/" title="16:44:54 UTC">Jun  9, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14980/" class="person">Luis Vacacas</a></dd>
+<dd class="detail"><p>Bludit version 3.9.12 suffers from a directory traversal vulnerability.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/file_inclusion">file inclusion</a></dd>
+<dd class="cve"><span>advisories</span> | <a href="/files/cve/CVE-2019-16113">CVE-2019-16113</a></dd>
+<dd class="md5"><span>MD5</span> | <code>58e30747011aa13fe7bddb3f9412d0d7</code></dd>
+<dd class="act-links"><a href="/files/download/157988/bludit3912-traversal.txt" title="Size: 6.3 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157988/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157988/Bludit-3.9.12-Directory-Traversal.html">View</span></a></dd>
+</dl>
+<dl id="F157987" class="file">
+<dt><a class="ico text-plain" href="/files/157987/Virtual-Airlines-Manager-2.6.2-SQL-Injection.html" title="Size: 2.6 KB">Virtual Airlines Manager 2.6.2 SQL Injection</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-09/" title="16:44:04 UTC">Jun  9, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14979/" class="person">Kostadin Tonev</a></dd>
+<dd class="detail"><p>Virtual Airlines Manager version 2.6.2 suffers from a remote SQL injection vulnerability.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/remote">remote</a>, <a href="/files/tags/sql_injection">sql injection</a></dd>
+<dd class="md5"><span>MD5</span> | <code>9a7ac79a2513a6118e16166897efe858</code></dd>
+<dd class="act-links"><a href="/files/download/157987/virtualairlinesmanager262ap-sql.txt" title="Size: 2.6 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157987/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157987/Virtual-Airlines-Manager-2.6.2-SQL-Injection.html">View</span></a></dd>
+</dl>
+<dl id="F157980" class="file">
+<dt><a class="ico text-plain" href="/files/157980/HFS-Http-File-Server-2.3m-Build-300-Buffer-Overflow.html" title="Size: 5.5 KB">HFS Http File Server 2.3m Build 300 Buffer Overflow</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-08/" title="14:14:36 UTC">Jun  8, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/11773/" class="person">hyp3rlinx</a> | Site <a href="http://hyp3rlinx.altervista.org">hyp3rlinx.altervista.org</a></dd>
+<dd class="detail"><p>HFS Http File Server version 2.3m build 300 suffers from a remote buffer overflow vulnerability that can lead to a denial of service.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/remote">remote</a>, <a href="/files/tags/web">web</a>, <a href="/files/tags/denial_of_service">denial of service</a>, <a href="/files/tags/overflow">overflow</a></dd>
+<dd class="cve"><span>advisories</span> | <a href="/files/cve/CVE-2020-13432">CVE-2020-13432</a></dd>
+<dd class="md5"><span>MD5</span> | <code>ff26db6a52d5ae8326efc24dc1754c44</code></dd>
+<dd class="act-links"><a href="/files/download/157980/HFS-HTTP-FILE-SERVER-v2.3-REMOTE-BUFFER-OVERFLOW-DoS.txt" title="Size: 5.5 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157980/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157980/HFS-Http-File-Server-2.3m-Build-300-Buffer-Overflow.html">View</span></a></dd>
+</dl>
+<dl id="F157979" class="file">
+<dt><a class="ico text-plain" href="/files/157979/10-Strike-Bandwidth-Monitor-3.9-Buffer-Overflow.html" title="Size: 9.3 KB">10-Strike Bandwidth Monitor 3.9 Buffer Overflow</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-08/" title="14:13:40 UTC">Jun  8, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14721/" class="person">Bobby Cooke</a></dd>
+<dd class="detail"><p>10-Strike Bandwidth Monitor version 3.9 ROP VirtualAlloc buffer overflow exploit with SEH, DEP, and ASLR.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/overflow">overflow</a></dd>
+<dd class="md5"><span>MD5</span> | <code>62c59edf3af57cd07c3c6f2a164c81b8</code></dd>
+<dd class="act-links"><a href="/files/download/157979/BandMon_3.9_ROP_VA.py.txt" title="Size: 9.3 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157979/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157979/10-Strike-Bandwidth-Monitor-3.9-Buffer-Overflow.html">View</span></a></dd>
+</dl>
+<dl id="F157962" class="file">
+<dt><a class="ico text-plain" href="/files/157962/Frigate-3.36.0.9-Local-Buffer-Overflow.html" title="Size: 2.5 KB">Frigate 3.36.0.9 Local Buffer Overflow</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-08/" title="13:54:53 UTC">Jun  8, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14853/" class="person">Paras Bhatia</a></dd>
+<dd class="detail"><p>Frigate version 3.36.0.9 local buffer overflow proof of concept exploit.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/overflow">overflow</a>, <a href="/files/tags/local">local</a>, <a href="/files/tags/proof_of_concept">proof of concept</a></dd>
+<dd class="md5"><span>MD5</span> | <code>bf16e2a42e2abd01b5d4ef1dfed28c5f</code></dd>
+<dd class="act-links"><a href="/files/download/157962/frigate33609-overflow.txt" title="Size: 2.5 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157962/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157962/Frigate-3.36.0.9-Local-Buffer-Overflow.html">View</span></a></dd>
+</dl>
+<dl id="F157984" class="file">
+<dt><a class="ico text-plain" href="/files/157984/Quick-Player-1.3-Buffer-Overflow.html" title="Size: 4.6 KB">Quick Player 1.3 Buffer Overflow</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-08/" title="13:33:33 UTC">Jun  8, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14836/" class="person">Felipe Winsnes</a></dd>
+<dd class="detail"><p>Quick Player version 1.3 suffers from a buffer overflow vulnerability.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/overflow">overflow</a></dd>
+<dd class="md5"><span>MD5</span> | <code>e67b33e14043370c6b44a10737fb827c</code></dd>
+<dd class="act-links"><a href="/files/download/157984/quickplayer13-overflow.txt" title="Size: 4.6 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157984/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157984/Quick-Player-1.3-Buffer-Overflow.html">View</span></a></dd>
+</dl>
+<dl id="F157961" class="file">
+<dt><a class="ico text-plain" href="/files/157961/Virtual-Airlines-Manager-2.6.2-SQL-Injection.html" title="Size: 0.5 KB">Virtual Airlines Manager 2.6.2 SQL Injection</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-07/" title="10:11:11 UTC">Jun  7, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14975/" class="person">Pankaj Kumar Thakur</a></dd>
+<dd class="detail"><p>Virtual Airlines Manager version 2.6.2 suffers from a remote SQL injection vulnerability.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/remote">remote</a>, <a href="/files/tags/sql_injection">sql injection</a></dd>
+<dd class="md5"><span>MD5</span> | <code>cdc4b6d1c060fa00669e675d2483993c</code></dd>
+<dd class="act-links"><a href="/files/download/157961/virtualairlinesmanager262-sql.txt" title="Size: 0.5 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157961/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157961/Virtual-Airlines-Manager-2.6.2-SQL-Injection.html">View</span></a></dd>
+</dl>
+<dl id="F157977" class="file">
+<dt><a class="ico text-plain" href="/files/157977/NeonLMS-4.6-Shell-Upload.html" title="Size: 3 KB">NeonLMS 4.6 Shell Upload</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-06/" title="17:22:22 UTC">Jun  6, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14973/" class="person">th3d1gger</a></dd>
+<dd class="detail"><p>NeonLMS version 3.6 suffers from an authenticated remote shell upload vulnerability.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/remote">remote</a>, <a href="/files/tags/shell">shell</a></dd>
+<dd class="md5"><span>MD5</span> | <code>2c01c097ed4377f370cef2cfdd6872fb</code></dd>
+<dd class="act-links"><a href="/files/download/157977/neonlms46-shell.txt" title="Size: 3 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157977/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157977/NeonLMS-4.6-Shell-Upload.html">View</span></a></dd>
+</dl>
+<dl id="F157960" class="file">
+<dt><a class="ico text-plain" href="/files/157960/Online-Exam-System-2015-SQL-Injection.html" title="Size: 1.2 KB">Online-Exam-System 2015 SQL Injection</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-06/" title="10:22:22 UTC">Jun  6, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14970/" class="person">Gus Ralph</a></dd>
+<dd class="detail"><p>Online-Exam-System 2015 suffers from a remote SQL injection vulnerability.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/remote">remote</a>, <a href="/files/tags/sql_injection">sql injection</a></dd>
+<dd class="md5"><span>MD5</span> | <code>9a7f3e2cf31db1fcf4c811b7e197bd2b</code></dd>
+<dd class="act-links"><a href="/files/download/157960/oes2015-sql.txt" title="Size: 1.2 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157960/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157960/Online-Exam-System-2015-SQL-Injection.html">View</span></a></dd>
+</dl>
+<dl id="F157958" class="file">
+<dt><a class="ico text-plain" href="/files/157958/WinGate-9.4.1.5998-Insecure-Permissions-Privilege-Escalation.html" title="Size: 2.8 KB">WinGate 9.4.1.5998 Insecure Permissions / Privilege Escalation</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-05/" title="18:27:27 UTC">Jun  5, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/11773/" class="person">hyp3rlinx</a> | Site <a href="http://hyp3rlinx.altervista.org">hyp3rlinx.altervista.org</a></dd>
+<dd class="detail"><p>WinGate version 9.4.1.5998 suffers from an insecure permissions vulnerability that allows for privilege escalation.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a></dd>
+<dd class="cve"><span>advisories</span> | <a href="/files/cve/CVE-2020-13866">CVE-2020-13866</a></dd>
+<dd class="md5"><span>MD5</span> | <code>cca9ea7f3d456df0c0e3a3e30fed3922</code></dd>
+<dd class="act-links"><a href="/files/download/157958/WINGATE-INSECURE-PERMISSIONS-LOCAL-PRIVILEGE-ESCALATION.txt" title="Size: 2.8 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157958/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157958/WinGate-9.4.1.5998-Insecure-Permissions-Privilege-Escalation.html">View</span></a></dd>
+</dl>
+<dl id="F157957" class="file">
+<dt><a class="ico text-plain" href="/files/157957/Avaya-IP-Office-11-Insecure-Transit-Password-Disclosure.html" title="Size: 2.9 KB">Avaya IP Office 11 Insecure Transit / Password Disclosure</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-05/" title="18:26:41 UTC">Jun  5, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/11773/" class="person">hyp3rlinx</a> | Site <a href="http://hyp3rlinx.altervista.org">hyp3rlinx.altervista.org</a></dd>
+<dd class="detail"><p>Avaya IP Office versions 9.1.8.0 through 11 suffer from an insecure transit vulnerability that allows for password disclosure.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a></dd>
+<dd class="cve"><span>advisories</span> | <a href="/files/cve/CVE-2020-7030">CVE-2020-7030</a></dd>
+<dd class="md5"><span>MD5</span> | <code>aa4f9f8d14cf8ae3c1ea713bab3c17d0</code></dd>
+<dd class="act-links"><a href="/files/download/157957/AVAYA-IP-OFFICE-INSECURE-TRANSIT-PASSWORD-DISCLOSURE.txt" title="Size: 2.9 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157957/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157957/Avaya-IP-Office-11-Insecure-Transit-Password-Disclosure.html">View</span></a></dd>
+</dl>
+<dl id="F157955" class="file">
+<dt><a class="ico text-plain" href="/files/157955/Cisco-UCS-Director-Cloupia-Script-Remote-Code-Execution.html" title="Size: 9.5 KB">Cisco UCS Director Cloupia Script Remote Code Execution</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-05/" title="18:21:03 UTC">Jun  5, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/7449/" class="person">mr_me</a>, <a href="/files/author/10857/" class="person">wvu</a> | Site <a href="http://www.metasploit.com">metasploit.com</a></dd>
+<dd class="detail"><p>This Metasploit module exploits an authentication bypass and directory traversals in Cisco UCS Director versions prior to 6.7.4.0 to leak the administrator&#39;s REST API key and execute a Cloupia script containing an arbitrary root command. Note that the primary functionality of this module is to leverage the Cloupia script interpreter to execute code. This functionality is part of the application&#39;s intended operation and considered a &quot;foreverday.&quot; The authentication bypass and directory traversals only get us there. If you already have an API key, you may set it in the API_KEY option. The LEAK_FILE option may be set if you wish to leak the API key from a different absolute path, but normally this isn&#39;t advisable. Tested on Cisco&#39;s VMware distribution of 6.7.3.0.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/arbitrary">arbitrary</a>, <a href="/files/tags/root">root</a></dd>
+<dd class="os"><span>systems</span> | <a href="/files/os/cisco">cisco</a></dd>
+<dd class="cve"><span>advisories</span> | <a href="/files/cve/CVE-2020-3243">CVE-2020-3243</a>, <a href="/files/cve/CVE-2020-3250">CVE-2020-3250</a></dd>
+<dd class="md5"><span>MD5</span> | <code>a3283617421910d08a845659be600c53</code></dd>
+<dd class="act-links"><a href="/files/download/157955/cisco_ucs_cloupia_script_rce.rb.txt" title="Size: 9.5 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157955/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157955/Cisco-UCS-Director-Cloupia-Script-Remote-Code-Execution.html">View</span></a></dd>
+</dl>
+<dl id="F157954" class="file">
+<dt><a class="ico text-plain" href="/files/157954/Castel-NextGen-DVR-1.0.0-Bypass-CSRF-Disclosure.html" title="Size: 3 KB">Castel NextGen DVR 1.0.0 Bypass / CSRF / Disclosure</a></dt>
+<dd class="datetime">Posted <a href="/files/date/2020-06-05/" title="18:19:24 UTC">Jun  5, 2020</a></dd>
+<dd class="refer">Authored by <a href="/files/author/14236/" class="person">Aaron Bishop</a></dd>
+<dd class="detail"><p>Castel NextGen DVR version 1.0.0 suffers from authorization bypass, credential disclosure, and cross site request forgery vulnerabilities.</p></dd>
+<dd class="tags"><span>tags</span> | <a href="/files/tags/exploit">exploit</a>, <a href="/files/tags/vulnerability">vulnerability</a>, <a href="/files/tags/bypass">bypass</a>, <a href="/files/tags/info_disclosure">info disclosure</a>, <a href="/files/tags/csrf">csrf</a></dd>
+<dd class="cve"><span>advisories</span> | <a href="/files/cve/CVE-2020-11679">CVE-2020-11679</a>, <a href="/files/cve/CVE-2020-11680">CVE-2020-11680</a>, <a href="/files/cve/CVE-2020-11681">CVE-2020-11681</a>, <a href="/files/cve/CVE-2020-11682">CVE-2020-11682</a></dd>
+<dd class="md5"><span>MD5</span> | <code>aa89a93b4527459f2ae2ef8eb52607af</code></dd>
+<dd class="act-links"><a href="/files/download/157954/castelnextgendvr100-bypassdisclosexsrf.txt" title="Size: 3 KB" rel="nofollow">Download</a>  | <a href="/files/favorite/157954/" class="fav" rel="nofollow">Favorite</a> | <a href="/files/157954/Castel-NextGen-DVR-1.0.0-Bypass-CSRF-Disclosure.html">View</span></a></dd>
+</dl>
+
+    
+    
+<div id="nv">
+<strong>Page 2 of 1,836</strong>
+<form method="post" id="page-jump" autocomplete="off"><fieldset><label>Jump to page</label><input type="text" name="jump" id="jump" size="2" maxlength="5" value="" /><input type="hidden" name="page" id="page" value="2" /><input type="hidden" name="page-max" id="page-max" value="1836" /></fieldset></form>
+<a href="/files/tags/exploit/page1/" accesskey="[">Back</a><a href="/files/tags/exploit/page1/">1</a><a class="on" href="/files/tags/exploit/page2/">2</a><a href="/files/tags/exploit/page3/">3</a><a href="/files/tags/exploit/page4/">4</a><a href="/files/tags/exploit/page5/">5</a><a href="/files/tags/exploit/page3/" accesskey="]">Next</a>
+</div>
+
+     </div>
+    
+      <div id="adblock">
+        
+      </div>
+      <div id="mn">
+        <div class="mn-like-us">
+<ul>
+<li><a href="https://twitter.com/packet_storm"><img src="https://packetstatic.com/img1514015884/s_twitter.png" width="24" height="24" alt="Follow on Twitter" /> Follow us on Twitter</a></li>
+<li><a href="https://www.facebook.com/packetstormfeed"><img src="https://packetstatic.com/img1514015884/s_facebook.png" width="24" height="24" alt="Follow on Facebook" /> Follow us on Facebook</a></li>
+<li><a href="/feeds"><img src="https://packetstatic.com/img1514015884/s_rss.png" width="24" height="24" alt="View RSS Feeds" /> Subscribe to an RSS Feed</a></li>
+</ul>
+</div>
+
+<div>
+<form id="cal" action="/files/cal/" method="get">
+<h2>File Archive:</h2><h3>June 2020</h3>
+<button id="cal-prev" name="cal-prev" type="button" value="2020-6"><span>&lt;</span></button><ul class="dotw"><li>Su</li><li>Mo</li><li>Tu</li><li>We</li><li>Th</li><li>Fr</li><li>Sa</li></ul>
+<ul><li></li><li class="low"><a href="/files/date/2020-06-01/">1</a><div class="stats"><div class="point"></div><div class="date">Jun 1st</div><div class="count">10 Files</div></div></li><li class="med"><a href="/files/date/2020-06-02/">2</a><div class="stats"><div class="point"></div><div class="date">Jun 2nd</div><div class="count">16 Files</div></div></li><li class="med"><a href="/files/date/2020-06-03/">3</a><div class="stats"><div class="point"></div><div class="date">Jun 3rd</div><div class="count">15 Files</div></div></li><li class="med"><a href="/files/date/2020-06-04/">4</a><div class="stats"><div class="point"></div><div class="date">Jun 4th</div><div class="count">29 Files</div></div></li><li class="low"><a href="/files/date/2020-06-05/">5</a><div class="stats"><div class="point"></div><div class="date">Jun 5th</div><div class="count">11 Files</div></div></li><li class="low"><a href="/files/date/2020-06-06/">6</a><div class="stats"><div class="point"></div><div class="date">Jun 6th</div><div class="count">2 Files</div></div></li></ul>
+<ul><li class="low"><a href="/files/date/2020-06-07/">7</a><div class="stats"><div class="point"></div><div class="date">Jun 7th</div><div class="count">1 Files</div></div></li><li class="med"><a href="/files/date/2020-06-08/">8</a><div class="stats"><div class="point"></div><div class="date">Jun 8th</div><div class="count">15 Files</div></div></li><li class="med"><a href="/files/date/2020-06-09/">9</a><div class="stats"><div class="point"></div><div class="date">Jun 9th</div><div class="count">18 Files</div></div></li><li class="med"><a href="/files/date/2020-06-10/">10</a><div class="stats"><div class="point"></div><div class="date">Jun 10th</div><div class="count">26 Files</div></div></li><li class="med"><a href="/files/date/2020-06-11/">11</a><div class="stats"><div class="point"></div><div class="date">Jun 11th</div><div class="count">28 Files</div></div></li><li class="med"><a href="/files/date/2020-06-12/">12</a><div class="stats"><div class="point"></div><div class="date">Jun 12th</div><div class="count">15 Files</div></div></li><li class="low"><a href="/files/date/2020-06-13/">13</a><div class="stats"><div class="point"></div><div class="date">Jun 13th</div><div class="count">2 Files</div></div></li></ul>
+<ul><li class="low"><a href="/files/date/2020-06-14/">14</a><div class="stats"><div class="point"></div><div class="date">Jun 14th</div><div class="count">1 Files</div></div></li><li class="med"><a href="/files/date/2020-06-15/">15</a><div class="stats"><div class="point"></div><div class="date">Jun 15th</div><div class="count">15 Files</div></div></li><li class="med"><a href="/files/date/2020-06-16/">16</a><div class="stats"><div class="point"></div><div class="date">Jun 16th</div><div class="count">31 Files</div></div></li><li class="med"><a href="/files/date/2020-06-17/">17</a><div class="stats"><div class="point"></div><div class="date">Jun 17th</div><div class="count">15 Files</div></div></li><li class="low today"><a href="/files/date/2020-06-18/">18</a><div class="stats"><div class="point"></div><div class="date">Jun 18th</div><div class="count">12 Files</div></div></li><li class="none"><a href="/files/date/2020-06-19/">19</a><div class="stats"><div class="point"></div><div class="date">Jun 19th</div><div class="count">0 Files</div></div></li><li class="none"><a href="/files/date/2020-06-20/">20</a><div class="stats"><div class="point"></div><div class="date">Jun 20th</div><div class="count">0 Files</div></div></li></ul>
+<ul><li class="none"><a href="/files/date/2020-06-21/">21</a><div class="stats"><div class="point"></div><div class="date">Jun 21st</div><div class="count">0 Files</div></div></li><li class="none"><a href="/files/date/2020-06-22/">22</a><div class="stats"><div class="point"></div><div class="date">Jun 22nd</div><div class="count">0 Files</div></div></li><li class="none"><a href="/files/date/2020-06-23/">23</a><div class="stats"><div class="point"></div><div class="date">Jun 23rd</div><div class="count">0 Files</div></div></li><li class="none"><a href="/files/date/2020-06-24/">24</a><div class="stats"><div class="point"></div><div class="date">Jun 24th</div><div class="count">0 Files</div></div></li><li class="none"><a href="/files/date/2020-06-25/">25</a><div class="stats"><div class="point"></div><div class="date">Jun 25th</div><div class="count">0 Files</div></div></li><li class="none"><a href="/files/date/2020-06-26/">26</a><div class="stats"><div class="point"></div><div class="date">Jun 26th</div><div class="count">0 Files</div></div></li><li class="none"><a href="/files/date/2020-06-27/">27</a><div class="stats"><div class="point"></div><div class="date">Jun 27th</div><div class="count">0 Files</div></div></li></ul>
+<ul><li class="none"><a href="/files/date/2020-06-28/">28</a><div class="stats"><div class="point"></div><div class="date">Jun 28th</div><div class="count">0 Files</div></div></li><li class="none"><a href="/files/date/2020-06-29/">29</a><div class="stats"><div class="point"></div><div class="date">Jun 29th</div><div class="count">0 Files</div></div></li><li class="none"><a href="/files/date/2020-06-30/">30</a><div class="stats"><div class="point"></div><div class="date">Jun 30th</div><div class="count">0 Files</div></div></li><li></li><li></li><li></li><li></li></ul>
+</form></div>
+<div id="mn-top-author" class="top-ten">
+<h2>Top Authors In Last 30 Days</h2>
+<ul>
+<li><a href="/files/authors/4676">Red Hat</a> <span>123 files</span></li>
+<li><a href="/files/authors/3695">Ubuntu</a> <span>45 files</span></li>
+<li><a href="/files/authors/3417">Gentoo</a> <span>23 files</span></li>
+<li><a href="/files/authors/2397">Apple</a> <span>16 files</span></li>
+<li><a href="/files/authors/5960">LiquidWorm</a> <span>7 files</span></li>
+<li><a href="/files/authors/7166">h00die</a> <span>6 files</span></li>
+<li><a href="/files/authors/14721">Bobby Cooke</a> <span>5 files</span></li>
+<li><a href="/files/authors/14973">th3d1gger</a> <span>5 files</span></li>
+<li><a href="/files/authors/14658">Xenofon Vassilakopoulos</a> <span>5 files</span></li>
+<li><a href="/files/authors/14970">Gus Ralph</a> <span>4 files</span></li>
+</ul>
+</div>
+<div id="mn-tag-file"><h2>File Tags</h2><ul><li><a href="/files/tags/activex/">ActiveX</a> <span>(928)</span></li><li><a href="/files/tags/advisory/">Advisory</a> <span>(72,894)</span></li><li><a href="/files/tags/arbitrary/">Arbitrary</a> <span>(14,194)</span></li><li><a href="/files/tags/bbs/">BBS</a> <span>(2,859)</span></li><li><a href="/files/tags/bypass/">Bypass</a> <span>(1,377)</span></li><li><a href="/files/tags/cgi/">CGI</a> <span>(993)</span></li><li><a href="/files/tags/code_execution/">Code Execution</a> <span>(5,671)</span></li><li><a href="/files/tags/conference/">Conference</a> <span>(649)</span></li><li><a href="/files/tags/cracker/">Cracker</a> <span>(775)</span></li><li><a href="/files/tags/csrf/">CSRF</a> <span>(3,132)</span></li><li><a href="/files/tags/denial_of_service/">DoS</a> <span>(20,356)</span></li><li><a href="/files/tags/encryption/">Encryption</a> <span>(2,287)</span></li><li><a href="/files/tags/exploit/">Exploit</a> <span>(45,899)</span></li><li><a href="/files/tags/file_inclusion/">File Inclusion</a> <span>(4,036)</span></li><li><a href="/files/tags/file_upload/">File Upload</a> <span>(868)</span></li><li><a href="/files/tags/firewall/">Firewall</a> <span>(818)</span></li><li><a href="/files/tags/info_disclosure/">Info Disclosure</a> <span>(2,449)</span></li><li><a href="/files/tags/intrusion_detection/">Intrusion Detection</a> <span>(802)</span></li><li><a href="/files/tags/java/">Java</a> <span>(2,505)</span></li><li><a href="/files/tags/javascript/">JavaScript</a> <span>(717)</span></li><li><a href="/files/tags/kernel/">Kernel</a> <span>(5,364)</span></li><li><a href="/files/tags/local/">Local</a> <span>(13,469)</span></li><li><a href="/files/tags/magazine/">Magazine</a> <span>(578)</span></li><li><a href="/files/tags/overflow/">Overflow</a> <span>(11,315)</span></li><li><a href="/files/tags/perl/">Perl</a> <span>(1,380)</span></li><li><a href="/files/tags/php/">PHP</a> <span>(4,917)</span></li><li><a href="/files/tags/proof_of_concept/">Proof of Concept</a> <span>(2,191)</span></li><li><a href="/files/tags/protocol/">Protocol</a> <span>(2,951)</span></li><li><a href="/files/tags/python/">Python</a> <span>(1,225)</span></li><li><a href="/files/tags/remote/">Remote</a> <span>(27,794)</span></li><li><a href="/files/tags/root/">Root</a> <span>(3,304)</span></li><li><a href="/files/tags/ruby/">Ruby</a> <span>(538)</span></li><li><a href="/files/tags/scanner/">Scanner</a> <span>(1,566)</span></li><li><a href="/files/tags/tool/">Security Tool</a> <span>(7,289)</span></li><li><a href="/files/tags/shell/">Shell</a> <span>(2,809)</span></li><li><a href="/files/tags/shellcode/">Shellcode</a> <span>(1,157)</span></li><li><a href="/files/tags/sniffer/">Sniffer</a> <span>(859)</span></li><li><a href="/files/tags/spoof/">Spoof</a> <span>(1,961)</span></li><li><a href="/files/tags/sql_injection/">SQL Injection</a> <span>(15,372)</span></li><li><a href="/files/tags/tcp/">TCP</a> <span>(2,301)</span></li><li><a href="/files/tags/trojan/">Trojan</a> <span>(556)</span></li><li><a href="/files/tags/udp/">UDP</a> <span>(855)</span></li><li><a href="/files/tags/virus/">Virus</a> <span>(640)</span></li><li><a href="/files/tags/vulnerability/">Vulnerability</a> <span>(28,616)</span></li><li><a href="/files/tags/web/">Web</a> <span>(8,305)</span></li><li><a href="/files/tags/paper/">Whitepaper</a> <span>(3,541)</span></li><li><a href="/files/tags/x86/">x86</a> <span>(908)</span></li><li><a href="/files/tags/xss/">XSS</a> <span>(16,420)</span></li><li><a href="/files/tags/">Other</a></li></ul></div><div id="mn-arch-file"><h2>File Archives</h2><ul><li><a href="/files/date/2020-06/">June 2020</a></li><li><a href="/files/date/2020-05/">May 2020</a></li><li><a href="/files/date/2020-04/">April 2020</a></li><li><a href="/files/date/2020-03/">March 2020</a></li><li><a href="/files/date/2020-02/">February 2020</a></li><li><a href="/files/date/2020-01/">January 2020</a></li><li><a href="/files/date/2019-12/">December 2019</a></li><li><a href="/files/date/2019-11/">November 2019</a></li><li><a href="/files/date/2019-10/">October 2019</a></li><li><a href="/files/date/2019-09/">September 2019</a></li><li><a href="/files/date/2019-08/">August 2019</a></li><li><a href="/files/date/2019-07/">July 2019</a></li><li><a href="/files/date/">Older</a></li></ul></div><div id="mn-os-file"><h2>Systems</h2><ul><li><a href="/files/os/aix/">AIX</a> <span>(417)</span></li><li><a href="/files/os/apple/">Apple</a> <span>(1,728)</span></li><li><a href="/files/os/bsd/">BSD</a> <span>(366)</span></li><li><a href="/files/os/cisco/">Cisco</a> <span>(1,889)</span></li><li><a href="/files/os/debian/">Debian</a> <span>(5,944)</span></li><li><a href="/files/os/fedora/">Fedora</a> <span>(1,688)</span></li><li><a href="/files/os/freebsd/">FreeBSD</a> <span>(1,239)</span></li><li><a href="/files/os/gentoo/">Gentoo</a> <span>(3,852)</span></li><li><a href="/files/os/hpux/">HPUX</a> <span>(871)</span></li><li><a href="/files/os/ios/">iOS</a> <span>(262)</span></li><li><a href="/files/os/iphone/">iPhone</a> <span>(107)</span></li><li><a href="/files/os/irix/">IRIX</a> <span>(220)</span></li><li><a href="/files/os/juniper/">Juniper</a> <span>(67)</span></li><li><a href="/files/os/linux/">Linux</a> <span>(37,768)</span></li><li><a href="/files/os/osx/">Mac OS X</a> <span>(668)</span></li><li><a href="/files/os/mandriva/">Mandriva</a> <span>(3,105)</span></li><li><a href="/files/os/netbsd/">NetBSD</a> <span>(255)</span></li><li><a href="/files/os/openbsd/">OpenBSD</a> <span>(471)</span></li><li><a href="/files/os/redhat/">RedHat</a> <span>(8,665)</span></li><li><a href="/files/os/slackware/">Slackware</a> <span>(941)</span></li><li><a href="/files/os/solaris/">Solaris</a> <span>(1,591)</span></li><li><a href="/files/os/suse/">SUSE</a> <span>(1,444)</span></li><li><a href="/files/os/ubuntu/">Ubuntu</a> <span>(6,708)</span></li><li><a href="/files/os/unix/">UNIX</a> <span>(8,671)</span></li><li><a href="/files/os/unixware/">UnixWare</a> <span>(178)</span></li><li><a href="/files/os/windows/">Windows</a> <span>(5,645)</span></li><li><a href="/files/os/">Other</a></li></ul></div>
+      </div>
+
+  </div>
+
+</div>
+
+<div id="f">
+  <div id="fc">
+
+    <div class="f-box" style="margin: 50px 0 0 0;">
+        <a href="/"><img src="https://packetstatic.com/img1514015884/ps_logo.png" width="218" alt="packet storm" /></a>
+    <p class="copy">&copy; 2020 Packet Storm. All rights reserved.</p>
+    </div>
+
+    <div class="f-box">
+    <dl>
+      <dt>Site Links</dt>
+      <dd><a href="/news/date/">News by Month</a></dd>
+      <dd><a href="/news/tags/">News Tags</a></dd>
+      <dd><a href="/files/date/">Files by Month</a></dd>
+      <dd><a href="/files/tags/">File Tags</a></dd>
+      <dd><a href="/files/directory/">File Directory</a></dd>
+    </dl>    
+    </div>
+
+    <div class="f-box">
+    <dl>
+      <dt>About Us</dt>
+      <dd><a href="/about/">History &amp; Purpose</a></dd>
+      <dd><a href="/contact/">Contact Information</a></dd>
+      <dd><a href="/legal/tos.html">Terms of Service</a></dd>
+      <dd><a href="/legal/privacy.html">Privacy Statement</a></dd>
+      <dd><a href="/legal/copyright.html">Copyright Information</a></dd>
+    </dl>
+    </div>
+
+    <div class="f-box">
+	<dl>
+      <dt>Services</dt>
+      <dd><a href="/services/">Security Services</a></dd>
+      <dt style="margin-top:1.5em;">Hosting By</dt>
+      <dd><a href="http://www.rokasecurity.com/">Rokasec</a></dd>
+    </dl>   
+    </div>
+    <div class="f-box">
+    <ul class="f-follow">
+     <li><a href="https://twitter.com/packet_storm"><img width="24" height="24" alt="Follow on Twitter" src="https://packetstatic.com/img1514015884/s_twitter.png" /> Follow us on Twitter</a></li>
+     <li><a href="https://www.facebook.com/packetstormfeed"><img width="24" height="24" alt="Follow on Facebook" src="https://packetstatic.com/img1514015884/s_facebook.png" /> Follow us on Facebook</a></li>
+     <li><a href="/feeds"><img width="24" height="24" alt="View RSS Feeds" src="https://packetstatic.com/img1514015884/s_rss.png" /> Subscribe to an RSS Feed</a></li>
+    </ul>
+    </div>
+
+  </div>
+</div>
+
+<div id="o-box"><img src="https://packetstatic.com/img1514015884/o_close.png" alt="close" height="30" width="30" id="o-close" /><div id="o-main"></div></div>
+
+
+<script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-18885198-1']); _gaq.push (['_gat._anonymizeIp']); _gaq.push(['_setDomainName', '.packetstormsecurity.com']); _gaq.push(['_trackPageview']); (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.googleanalytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})(); </script><noscript><img src="https://ssl.google-analytics.com/__utm.gif?utmwv=1.3&amp;utmn=1039907694&amp;utmcs=ISO-8859-1&amp;utmsr=31337x31337&amp;utmsc=32-bit&amp;utmul=en-us&amp;utmje=0&amp;utmfl=-&amp;utmcn=1&amp;utmdt=Exploit%20Files%u2248%20Packet%20Storm&amp;utmhn=packetstormsecurity.com&amp;utmr=-&amp;utmp=%2Ffiles%2Ftags%2Fexploit%2Fpage2%2F&amp;utmac=UA-18885198-1&amp;utmcc=__utma%3D32867617.1039907694.1592521881.1592521881.1592521881.1%3B%2B__utmz%3D32867617.1592521881.1.1.utmccn%3D(direct)%7Cutmcsr%3D(direct)%7Cutmcmd%3D(none)" width="2" height="2" alt="" /></noscript>
+<!-- Thu, 18 Jun 2020 23:11:21 GMT -->
+</body>
+</html>
