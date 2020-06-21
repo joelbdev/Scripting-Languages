@@ -5,7 +5,8 @@ storedpassword=$(< password.txt) #takes the stored hash from password.txt and st
 
 if [ "$passwordHash" == "$storedpassword" ];then #compares the hash of the password entered to the hash of the password on file
    echo -e "\n \033[32m Access granted" #-e modifier so that new line character can be used for better formatting
+   exit 0
 else
     echo -e " \n \033[031m Access denied"
+    exit 1
 fi
-exit 0
