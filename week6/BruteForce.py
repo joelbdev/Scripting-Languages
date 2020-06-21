@@ -17,7 +17,7 @@ while wordlistHash != passwordHash: #while loop will keep going until the passwo
         word = y.join(c) #creates the password guess to be tried by adding one of the letters from wordlist to the empty y string
         wordlistHash = hashlib.sha256(word.encode("utf-8")).hexdigest() #hashes the string word
         print(f"Trying password: {word}:{wordlistHash}") #keeps the user aware of where the script is currently at
-        if wordlistHash == passwordHash: #lets the user know what the password was when it is found
+        if wordlistHash == passwordHash: #lets the user know what the password was when it is found and breaks out of the while loop
             print(f"Found password: {word}")
             break
     length=length+1 #increments the length of the password guess e.g. a, aa, aaa, aaaa
